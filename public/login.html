@@ -1,1 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Panel Login</title>
+<style>
+body{font-family:system-ui;background:#0b0f17;color:#e6e9ef;display:grid;place-items:center;min-height:100vh;margin:0}
+form{background:#131826;padding:32px;border-radius:12px;width:320px;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+h1{margin:0 0 20px;font-size:20px}
+input{width:100%;padding:10px 12px;margin:6px 0 14px;background:#0b0f17;border:1px solid #232a3a;border-radius:6px;color:#e6e9ef;box-sizing:border-box}
+button{width:100%;padding:10px;background:#4f7cff;border:0;color:white;border-radius:6px;font-weight:600;cursor:pointer}
+.err{color:#ff6b6b;font-size:13px;margin-bottom:10px}
+</style></head><body>
+<form method="post" action="/login">
+<h1>Admin Login</h1>
+<div class="err" id="e"></div>
+<label>Username</label><input name="username" autofocus>
+<label>Password</label><input name="password" type="password">
+<button>Login</button>
+</form>
+<script>if(location.search.includes('e=1'))document.getElementById('e').textContent='Invalid credentials';</script>
+</body></html>
 
